@@ -1,0 +1,49 @@
+body {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+html,
+body{
+  width: 100%;
+  height: 100%;
+}
+.heading{
+  width: 60%;
+  word-spacing: -0.5vmin;
+  text-align: center;
+  line-height: 5vmax;
+  font-size: 5vmax;
+  font-weight: 700;
+  letter-spacing: -0.2vmin;
+
+}
+.heading2{
+  width: 40%;
+  color: gray;
+  font-weight: 400;
+  text-align: center;
+  font-size: 1.5vmax;
+  line-height: 2vmax;
+
+}
+.main-page{
+  width: 100vw;
+  height: 81.7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 4vmax 0;
+}
+.main-page button{
+  scale: 1.5;
+}
+
+.ul1 li{
+ 
+  min-height: 4vmax;
+  margin-top: 1vmax;
+}
+
