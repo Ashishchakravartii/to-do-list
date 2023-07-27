@@ -1,21 +1,18 @@
 <%-include("./partials/nav.ejs")%>
     <div class="w-25 rounded h-75 bg-light m-auto">
         <ul class="ul1 list-unstyled w-100 h-100 ">
-            <li class="w-100 ">JS practice lorem59
-               <div><a class="text-decoration-none ms-2 btn " href="">🖋️</a><a class="text-decoration-none ms-2 btn " href="">❌</a></div> 
+         <button><a href="/create1">Create Note</a></button>
+       <%  data.forEach((elem)=>{ %>
+
+            <li class="w-100 "><%= elem.note %>
+               <div>
+                  <a class="text-decoration-none ms-2 btn " href="/update/<%= elem._id%>">🖋️</a>
+                  <a class="text-decoration-none ms-2 btn " href="/delete1/<%= elem._id%>">❌</a>
+               </div> 
             </li>
-           
-            <li class="w-100 ">JS practice lorem59
-               <div><a class="text-decoration-none ms-2 btn " href="">🖋️</a><a class="text-decoration-none ms-2 btn " href="">❌</a></div> 
-            </li>
-           
-            <li class="w-100 ">JS practice lorem59
-               <div><a class="text-decoration-none ms-2 btn " href="">🖋️</a><a class="text-decoration-none ms-2 btn " href="">❌</a></div> 
-            </li>
-           
-            <li class="w-100 ">JS practice lorem59
-               <div><a class="text-decoration-none ms-2 btn " href="">🖋️</a><a class="text-decoration-none ms-2 btn " href="">❌</a></div> 
-            </li>
+            
+       <%  }) %>
+          
            
         </ul>
     </div>

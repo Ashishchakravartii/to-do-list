@@ -1,3 +1,20 @@
 <%-include("./partials/nav.ejs")%>
-<h1>List 2</h1>
-<%-include("./partials/footer.ejs")%>
+    <div class="w-25 rounded h-75 bg-light m-auto">
+        <h1>Work Related Task</h1>
+        <ul class="ul1 list-unstyled w-100 h-100 ">
+         <button><a href="/create1">Create Note</a></button>
+       <%  data.forEach((elem)=>{ %>
+
+            <li class="w-100 "><%= elem.note %>
+               <div>
+                  <a class="text-decoration-none ms-2 btn " href="/update/<%= elem._id%>">🖋️</a>
+                  <a class="text-decoration-none ms-2 btn " href="/delete1/<%= elem._id%>">❌</a>
+               </div> 
+            </li>
+            
+       <%  }) %>
+          
+           
+        </ul>
+    </div>
+    <%-include("./partials/footer.ejs")%>
