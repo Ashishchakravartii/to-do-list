@@ -1,0 +1,28 @@
+<%-include("./partials/header.ejs")%>
+<%-include("./partials/nav.ejs")%>
+        <div class="signinBox w-100 h-75 d-flex justify-content-center align-items-center ">
+            <div class="signinDiv shadow bg-white signup-box w-75 h-100  rounded-pill d-flex border border-5 border-top-0 border-bottom-0 border-dark">
+              <div class="signinCircle w-50 h-100 bg-dark rounded-pill d-flex justify-content-center align-items-center">
+                <h1 class="signup-heading ">
+                   signin</h1>
+              </div>
+              <div class="w-50 h-100 d-flex flex-column justify-content-center align-items-center">
+                
+                <form action="/signin" method="post" class="d-flex align-items-center flex-column gap-4 w-50">
+                  <input class="form-control border shadow-sm rounded " type="email" placeholder="email" name="email">
+                  <input class="form-control border shadow-sm rounded " type="password" placeholder="password" name="password">
+                  <button class="btn border border-dark  btn-sm  w-50 h-25"><a href="" class="text-decoration-none text-dark fs-5">Log In</a></button>
+                  
+                </form>
+                <h6 class="mt-3"><a class=" text-decoration-none " 
+                  href="/get-email"> Forget password?</a></h6>
+                <h6>Don't have an account? <a class=" text-decoration-none" href="/signup"> sign-up</a></h6>
+                
+                
+
+              </div>
+              
+            </div>
+        </div>
+        </p>
+        <%-include("./partials/footer.ejs")%>

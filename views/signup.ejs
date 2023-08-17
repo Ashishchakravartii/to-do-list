@@ -1,0 +1,26 @@
+<%-include("./partials/header.ejs")%>
+<%-include("./partials/nav.ejs")%>
+        <div class="signupBox d-flex justify-content-center align-items-center ">
+            <div class="signupDiv shadow bg-white  w-75 h-100  rounded-pill d-flex border border-5 border-top-0 border-bottom-0 border-start-0 border-dark">
+              <div class="signupCircle w-50 h-100 bg-dark rounded-pill d-flex justify-content-center align-items-center">
+                <h1 class="signup-heading ">
+                    Organize it all</h1>
+              </div>
+              <div class="w-50 h-100 d-flex flex-column justify-content-center align-items-center">
+                
+                <form action="/signup" method="post" class="d-flex flex-column gap-4 w-50 align-items-center">
+                  <input class="form-control border shadow-sm rounded p-2" type="text" placeholder="name" name="name">
+                  <input class="form-control border shadow-sm rounded p-2" type="email" placeholder="email" name="email">
+                  <input class="form-control border shadow-sm rounded p-2" type="password" placeholder="********" name="password">
+                  <button class="btn border border-dark  btn-sm  w-50 h-25"><a href="" class="text-decoration-none text-dark fs-5">Let's GO!</a></button>
+                </form>
+                <h6 class="mt-4">Already have an account? <a class="text-decoration-none" href="/signin"> Sign-In</a></h6>
+                <p class="text-center">By using to.do's you accept our <br>
+                  <span class="text-primary">Terms of Service</span> and <span class="text-primary">Privacy Policy</span> </p>
+
+              </div>
+              
+            </div>
+        </div>
+        </p>
+        <%-include("./partials/footer.ejs")%>

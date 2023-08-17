@@ -7,6 +7,8 @@ html,
 body{
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
+  
 }
 .heading{
   width: 60%;
@@ -16,34 +18,199 @@ body{
   font-size: 5vmax;
   font-weight: 700;
   letter-spacing: -0.2vmin;
+  font-family: 'Borel', cursive;
+  position: inherit;
+  color: white;
+  z-index: 100;
+  
 
 }
 .heading2{
-  width: 40%;
-  color: gray;
+  width: 60%;
   font-weight: 400;
   text-align: center;
   font-size: 1.5vmax;
   line-height: 2vmax;
+  color: white;
+  z-index: 100;
+  letter-spacing: 0.3vmax;
 
+}
+nav{
+  position: fixed;
+  top: 0;
+  left: 0%;
+  z-index: 100;
+  background-color: white;
+  width: 100vw;
+  height: 11vh;
 }
 .main-page{
   width: 100vw;
-  height: 81.7vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  padding: 4vmax 0;
+  padding: 8vmax 0;
+  background-image: url(https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+.main-page-update{
+  width: 100vw;
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 8vmax 0;
+
+}
+.container{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 11%;
+  left: -0.7%;
+
+}
+.overlay{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color:rgba(0, 0, 0, 0.3)
 }
 .main-page button{
   scale: 1.5;
+  z-index: 100;
 }
-
+.ul1{
+ display: inline-block;
+}
+.scroll{
+  white-space: nowrap;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 2vmax;
+  
+}
+.scroll::-webkit-scrollbar{
+  display: inline-flex;
+}
 .ul1 li{
- 
-  min-height: 4vmax;
+  
+  min-height: 2vmax;
   margin-top: 1vmax;
 }
 
+.signup-heading{
+  font-weight: 700;
+  color: white;
+  font-family: 'Borel', cursive;
+  font-size: 4vmax;
+  
+}
+.lineTxt {
+  text-decoration: line-through;
+}
+.update-aTag >i{
+  scale: 2;
+}
+.update-aTag{
+  scale: 1.5;
+}
+.sideBar{
+  width: 16%;
+  height: 100%;
+  background-color: white;
+}
+
+.main-list-page{
+  background-image: url(https://images.unsplash.com/photo-1529314564927-f5fb4a459242?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80);
+  background-size: cover;
+  background-position: center;
+}
+.listBox{
+  width: 84%;
+  height: 100%;
+}
+.list-topBar{
+  width: 100%;
+  height: 12%;
+  display: flex;
+  align-items: center;
+  margin-left: 3vmax;
+  margin-top: 0.8vmax;
+  
+}
+.list-topBar>h1{
+  display: inline-block;
+  background-color: #fff;
+  font-size: 1.55vmax;
+  padding: 0.5vmax 5vmax;
+  border-radius: 50px;
+
+}
+.list-body{
+  width: 100%;
+  height: 88%;
+  margin-top: -1.2%;
+  display: flex;
+  justify-content: space-around;
+}
+/* .updateWin{
+  width: 45%;
+  height: 85%;
+  border-radius: 20px;
+  background-color: white;
+  margin-right: 4.5vmax;
+} */
+.noteWin{
+  width: 50%;
+  height: 85%;
+  border-radius: 20px;
+  background-color:white;
+}
+
+.signupBox{
+  width: 100vw;
+  height: 100vh;
+  padding: 5vmax 0;
+  margin-top: 1vmax;
+ 
+}
+.signinBox{
+  width: 100vw;
+  height: 100vh;
+  margin-top: 1vmax;
+ 
+}
+.signinDiv{
+  margin-top: 12vmax;
+  
+}
+.signupDiv{
+  margin-top: 2vmax;
+}
+.signinCircle{
+  background-color: black;
+  /* background-image: url(https://images.unsplash.com/photo-1522008660239-1bbdb39444c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+  background-position: center;
+  background-size: cover; */
+}
+.signupCircle{
+  /* background-image: url(https://images.unsplash.com/photo-1476469535352-80159d0af31d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80);
+  background-position: center;
+  background-size: cover; */
+  background-color: black;
+
+}
+.roboto{
+  font-family: "Roboto";
+}

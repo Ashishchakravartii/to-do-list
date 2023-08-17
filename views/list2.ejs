@@ -1,8 +1,9 @@
+<%-include("./partials/header.ejs")%>
 <%-include("./partials/nav.ejs")%>
     <div class="w-25 rounded h-75 bg-light m-auto">
         <h1>Work Related Task</h1>
         <ul class="ul1 list-unstyled w-100 h-100 ">
-         <button><a href="/create1">Create Note</a></button>
+         <button><a href="/signup">Create Note</a></button>
        <%  data.forEach((elem)=>{ %>
 
             <li class="w-100 "><%= elem.note %>

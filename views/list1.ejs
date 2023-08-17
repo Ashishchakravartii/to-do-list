@@ -1,19 +1,82 @@
-<%-include("./partials/nav.ejs")%>
-    <div class="w-25 rounded h-75 bg-light m-auto">
-        <ul class="ul1 list-unstyled w-100 h-100 ">
-         <button><a href="/create1">Create Note</a></button>
-       <%  data.forEach((elem)=>{ %>
+<%-include("./partials/header.ejs")%>
+   <div class="w-100 h-100 main-list-page d-flex">
+      <div class="sideBar d-flex flex-column align-items-center justify-content-around">
+         <!-- ----------Side bar------ -->
+         <div class="d-flex  align-items-center w-100">
+            <i class="ri-user-fill fs-1"></i>
+            <h6 class="w-75 fs-5 roboto">&nbsp; Ashish Chakravarti </h6>
+         </div>
+         <div class="h-75"></div>
+         <div class=" align-items-center d-flex flex-column justify-content-around w-100 h-50">
+            <div class="h-25"></div>
+            <button class="btn bg-light w-50"><a class="text-dark text-decoration-none"
+                  href="/">Log-Out</a></button>
+            <button class="btn bg-light w-75"><a class="text-dark text-decoration-none"
+                  href="/get-email">Forget Password</a></button>
+            <button class="btn bg-light w-50"><a class="text-dark text-decoration-none"
+                  href="/reset">Reset Password</a></button>
+         </div>
+         <!-- ----------Side bar------ -->
+      </div>
+      <div class="listBox">
+         <div class="list-topBar">
+            <h1 class="roboto"><i class="ri-article-line"></i> All my tasks
 
-            <li class="w-100 "><%= elem.note %>
-               <div>
-                  <a class="text-decoration-none ms-2 btn " href="/update/<%= elem._id%>">🖋️</a>
-                  <a class="text-decoration-none ms-2 btn " href="/delete1/<%= elem._id%>">❌</a>
-               </div> 
-            </li>
-            
-       <%  }) %>
-          
-           
-        </ul>
-    </div>
-    <%-include("./partials/footer.ejs")%>
+            </h1>
+         </div>
+         <div class="list-body d-flex align-items-center">
+            <div class="noteWin d-flex flex-column justify-content-between">
+               <h3 class="ms-4 mt-3 fs-5">My Notes</h3>
+               <div class="scroll ">
+                  <ul class="ul1 d-flex flex-column justify-content-between list-unstyled w-100 h-100 ">
+                     <% data.forEach((elem)=>{ %>
+                     <div class="d-flex justify-content-between">
+                         <span class="d-flex ps-2 rounded-3 flex-column bg-light mt-2 w-100">
+                           <li class=" w-100 taskLi"><input class="form-check-input bg-dark-subtle p-2"
+                                 type="checkbox" id="checkbox">
+                              &nbsp;&nbsp;&nbsp; <%= elem.note %>
+                           </li>
+
+                           <p class="ms-5 text-secondary"> <%= elem.discription %></p>
+                        </span>
+                           <div class="d-flex  align-items-center">
+                              <a class="text-decoration-none ms-2 btn update-aTag" href="/update/<%= elem._id%>"><i
+                                    class="ri-pencil-fill"></i></a>
+                              <a class=" text-decoration-none ms-2 btn update-aTag" href="/delete1/<%= elem._id%>"><i
+                                    class="ri-close-circle-line"></i></a>
+                                 </div>
+                                 
+                      </div>
+                                 
+                                 <% }) %>
+
+                  </ul>
+               </div>
+               <div class="shadow-lg w-100 ps-4 pe-4">
+                  <form class="form-control-lg " action="/create1" method="post">
+                     <span class="d-flex flex-column align-items-center"> 
+                      <span class="d-flex bg-light p-2 rounded-pill w-100">  <input class="ps-3 text-secondary form-control-lg form-control-plaintext" required type="text" value=""
+                           placeholder="Add a task" name="note">
+                           <button class="btn btn-lg bg-dark text-light rounded-circle "> + </button>
+                     </span>
+                        <input class="p-3 fs-5 form-control-lg form-control-plaintext" type="text" value=""
+                           placeholder="Discription (Optional)" name="discription">
+                          
+                     </span>
+                  </form>
+               </div>
+            </div>
+            <!-- <div class="updateWin p-3">
+               <form class="form-control-sm w-100 h-100" action="" method="post">
+                  <h5>Update Your Note</h5>
+                  <div class="d-flex  w-100 h-100 flex-column align-items-center justify-content-center gap-4 ">
+                     <input class="form-control-lg form-control-plaintext w-50 " value="" type="text"
+                        placeholder="Write Your Task Here!!!" name="note">
+                     <button class="mb-4 w-50 btn btn bg-primary text-light rounded-pill ps-4 pe-4">Update</button>
+                  </div>
+               </form>
+            </div> -->
+         </div>
+      </div>
+   </div>
+   <%-include("./partials/footer.ejs")%>
